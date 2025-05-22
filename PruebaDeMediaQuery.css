@@ -1,0 +1,153 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*HEADER +768PX*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(107, 168, 238);
+    color: aliceblue;
+
+}
+
+nav ul{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+
+nav li{
+    color: aliceblue;
+    margin: 10px;
+}
+
+nav li:hover{
+    transition: 1s;
+    background-color: white;
+    color: rgb(107, 168, 238);
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+/*BODY*/
+
+.Grid{
+       
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-template-rows: repeat(2, 1fr);
+       grid-template-areas: 
+               'Aside Uno  Uno'
+               'Aside Dos  Dos'
+              
+        
+   }
+
+.Aside{
+    grid-area: Aside;
+    background-image: url(https://i.redd.it/serving-you-a-williams-racing-wallpaper-wednesday-v0-9ed0zpppo63b1.png?width=1080&format=png&auto=webp&s=5ed9624700a7076f6a1bd3c11cc1ddf45cc60ae7);
+    background-size: cover;
+    color: white;
+    text-shadow: 40px;
+}
+.Uno{
+    grid-area: Uno;
+}
+
+.Dos{
+    grid-area: Dos;
+}
+
+.Uno, .Dos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p, h2{
+    margin: 15px;
+}
+
+p{
+    font-size: 19px;
+    text-align: justify;
+}
+footer{
+    color: white;
+    background-color: rgb(107, 168, 238);
+    padding: 10px;
+}
+
+.Aside, .Uno, .Dos{
+    margin: 15px;
+    padding: 5px;
+    border: solid 2px;
+    border-color: rgb(107, 168, 238);
+    border-radius: 25px;
+}
+
+@media(width <=768px) and (width >=480px)   {
+
+    .Grid{       
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-template-rows: repeat(2, 1fr);
+       grid-template-areas: 
+               'Aside  Aside'
+               'Uno  Dos'
+    }
+
+    header{
+    flex-direction: column;
+    }
+
+    .Aside{
+    text-align: center;
+    }
+
+    footer p{
+        text-align: center;
+    }
+    
+}
+
+@media(width <=480px) and (width >=320px) {
+
+    .Grid{       
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+                'Aside'
+                'Uno'
+                'Dos'
+     }
+ 
+     header{
+     flex-direction: column;
+     }
+     
+     nav ul{
+        flex-direction: column;
+     }
+     nav li{
+        flex-direction: column;
+     }
+     .Aside{
+     text-align: center;
+     }
+ 
+     footer p{
+         text-align: center;
+     }
+       
+}  
